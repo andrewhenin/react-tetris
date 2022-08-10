@@ -1,14 +1,16 @@
-import { type } from "@testing-library/user-event/dist/type";
+// import { type } from "@testing-library/user-event/dist/type";
+
 import React from "react";
+import { StyledStage } from "./Styles/StyledStage";
+
 import Cell from './Cell';
 
-
 const Stage = ({ stage }) => (
-    <div>
+    <StyledStage width={stage[0].length} height={stage.length}>
         {stage.map(row => row.map((cell, x) => <Cell key={x} type={Cell[0]}/>))}
 
 
-    </div>
+    </StyledStage>
 );
 
 export default Stage;
